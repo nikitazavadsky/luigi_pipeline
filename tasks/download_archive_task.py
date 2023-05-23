@@ -17,7 +17,7 @@ from constants import (
 )
 
 
-class DownloadArchieveTask(Task):
+class DownloadArchiveTask(Task):
     """This task should download dataset archieve with appropriate folder structure"""
 
     dataset_id = Parameter(default=ARCHIEVE_DEFAULT_DATASET)
@@ -31,6 +31,7 @@ class DownloadArchieveTask(Task):
                 str(self.date.month),
                 str(self.date.day),
                 self.dataset_id,
+                "untar",
             )
         )
 
